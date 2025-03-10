@@ -67,7 +67,13 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(textInput2.getText());
         String num2str = textInput2.getText().toString();
         int num2 = Integer.parseInt(num2str);
-        float result = (float) num1 / num2;
-        textOutput.setText(String.valueOf(result));
+        if (num2 == 0) {
+            String a = "Error";
+            textOutput.setText(a);
+        }
+        else {
+            float result = (float) num1 / num2;
+            textOutput.setText(String.valueOf(result));
+        }
     }
 }
